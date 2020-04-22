@@ -1,33 +1,28 @@
-// ion-menu-button {
-//     color: var(--ion-color-primary);
-//   }
-  
-//   #container {
-//     text-align: center;
-//     position: absolute;
-//     left: 0;
-//     right: 0;
-//     top: 50%;
-//     transform: translateY(-50%);
-//   }
-  
-//   #container strong {
-//     font-size: 20px;
-//     line-height: 26px;
-//   }
-  
-//   #container p {
-//     font-size: 16px;
-//     line-height: 22px;
-//     color: #8c8c8c;
-//     margin: 0;
-//   }
-  
-//   #container a {
-//     text-decoration: none;
-//   }
-  
-//   ion-content ion-toolbar {
-//     --background: transparent;
-//   }
+ion-footer {
+    color: black;
+    background-color: white;
+}
+
+li {
+    list-style: none;
+}
+
+ion-icon[name="calendar-outline"] {
+    float: left;
+    font-size: 30px;
+    display: inline-block;
+    width: 10%;
+}
+
+ion-input {
+    width:80%;
+    float: right;
+}
+
+ion-icon[name="paper-plane"] {
+    font-size: 30px;
+    width: 10%;
+    float:right;
+}
+
 
