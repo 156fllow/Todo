@@ -13,34 +13,34 @@ export class AppComponent implements OnInit {
   public selectedIndex = 0;
   public appPages = [
     {
-      title: 'Inbox',
+      title: 'リスト',
       url: '/list',
-      icon: 'mail'
+      icon: 'list'
     },
     {
-      title: 'Outbox',
-      url: '/folder/Outbox',
-      icon: 'paper-plane'
+      title: '新しいリストを作成',
+      url: '/add',
+      icon: 'add'
     },
     {
-      title: 'Favorites',
-      url: '/folder/Favorites',
-      icon: 'heart'
+      title: 'マイ　スケジュール',
+      url: '/time',
+      icon: 'time'
     },
     {
-      title: 'Archived',
-      url: '/folder/Archived',
-      icon: 'archive'
+      title: 'マイ　リスト',
+      url: '/listbox',
+      icon: 'document'
     },
     {
-      title: 'Trash',
-      url: '/folder/Trash',
-      icon: 'trash'
+      title: '設定',
+      url: '/settings',
+      icon: 'settings'
     },
     {
-      title: 'Spam',
-      url: '/folder/Spam',
-      icon: 'warning'
+      title: 'このアプリをシェア',
+      url: '/share',
+      icon: 'share'
     }
   ];
   public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
