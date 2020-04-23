@@ -1,5 +1,5 @@
 ion-footer {
-    color: black;
+    color: white;
     background-color: white;
 }
 
@@ -8,21 +8,22 @@ li {
 }
 
 ion-icon[name="calendar-outline"] {
+    color: white;
     float: left;
     font-size: 30px;
-    display: inline-block;
     width: 10%;
 }
 
 ion-input {
     width:80%;
-    float: right;
+    float: left;
 }
 
 ion-icon[name="paper-plane"] {
+    color: blue;
     font-size: 30px;
     width: 10%;
-    float:right;
+    float: left;
 }
 
 
