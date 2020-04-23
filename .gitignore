@@ -29,7 +29,11 @@ npm-debug.log*
 /platforms
 /plugins
 /www
+/resources
 
 angular.json
 package-lock.json
 package.json
+build.json
+config.xml
+debug.keystore
