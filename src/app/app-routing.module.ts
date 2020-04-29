@@ -12,7 +12,7 @@ const routes: Routes = [
     loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
   },
   {
-    path: 'list',
+    path: 'list/:id',
     loadChildren: () => import('./list/list.module').then( m => m.ListPageModule)
   }
 ];
