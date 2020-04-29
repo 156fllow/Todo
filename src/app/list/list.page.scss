@@ -19,11 +19,22 @@ ion-input {
     float: left;
 }
 
-.start {
-    position: absolute;
-    top: 10%;
-    width: 100%;
+ion-footer {
+    position: fixed;
+    bottom: 0%;
 }
+
+ion-header {
+    position: fixed;
+    top: 0;
+}
+
+// .start {
+//     position: absolute;
+//     top: 10%;
+//     width: 100%;
+// }
+
 
 
 // ion-icon[name="paper-plane"] {

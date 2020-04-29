@@ -14,6 +14,9 @@ export class FolderPage implements OnInit {
 
   ngOnInit() {
     this.folder = this.activatedRoute.snapshot.paramMap.get('id');
+    if(this.folder=='list') {
+      this.folder = 'リスト';
+    }
   }
 
 }
