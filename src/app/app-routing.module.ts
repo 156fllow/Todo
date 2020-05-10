@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'folder/Inbox',
+    redirectTo: 'folder/Inbo',
     pathMatch: 'full'
   },
   {
@@ -12,12 +12,16 @@ const routes: Routes = [
     loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
   },
   {
-    path: 'list/:id',
+    path: 'list',
     loadChildren: () => import('./list/list.module').then( m => m.ListPageModule)
   },
   {
     path: 'header',
     loadChildren: () => import('./header/header.module').then( m => m.HeaderPageModule)
+  },
+  {
+    path: 'schedule/:title',
+    loadChildren: () => import('./schedule/schedule.module').then( m => m.SchedulePageModule)
   }
 ];
 

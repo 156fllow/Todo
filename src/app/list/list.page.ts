@@ -10,6 +10,7 @@ export class ListPage implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    
   }
 
 }

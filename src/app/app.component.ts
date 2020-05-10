@@ -24,7 +24,7 @@ export class AppComponent implements OnInit {
     },
     {
       title: 'マイ　スケジュール',
-      url: '/time',
+      url: '/schedule/スケジュール',
       icon: 'time'
     },
     {
