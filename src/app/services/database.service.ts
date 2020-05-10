@@ -78,7 +78,8 @@ export class DatabaseService {
 
   // Add
   addSong(data: Data) {
-    return this.storage.executeSql('INSERT INTO list (id, memo, is_complete, complete_tike, target_time) VALUES (?, ?)', data)
+    let data_sql = [data.memo, data.is_complete, data.complete_time,data.target_time]
+    return this.storage.executeSql('INSERT INTO list (id, memo, is_complete, complete_tike, target_time) VALUES (?, ?, ?, ?, ?)', data_sql)
     .then(res => {
       this.getData();
     });
@@ -100,7 +101,7 @@ export class DatabaseService {
   // Update
   updateData(id,data: Data) {
     let data_sql = [data.memo, data.is_complete, data.complete_time,data.target_time]
-    return this.storage.executeSql(`UPDATE list SET memo = ?, is_complete= ? complete_time = ? target_time = ? WHERE id = ${id}`, data)
+    return this.storage.executeSql(`UPDATE list SET memo = ?, is_complete= ? complete_time = ? target_time = ? WHERE id = ${id}`, data_sql)
     .then(data => {
     this.getData();
   })
