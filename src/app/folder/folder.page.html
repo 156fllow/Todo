@@ -1,17 +1,9 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-    <ion-title>{{ folder }}</ion-title>
-    <ion-buttons slot="end">
-      <ion-button><ion-icon slot="icon-only" name="bookmark"></ion-icon></ion-button>
-      <ion-button><ion-icon slot="icon-only" name="color-palette-outline"></ion-icon></ion-button>
-      <ion-button><ion-icon slot="icon-only" name="checkmark-circle-outline"></ion-icon></ion-button>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-header>
+<app-header [header_title]="title"></app-header>
 
 <ion-content>
-  <list-page></list-page>
+    <ng-container [ngSwitch]="title">
+      <app-schedule *ngSwitchCase="'スケジュール'"></app-schedule>
+      <app-mylist *ngSwitchCase="'マイリスト'"></app-mylist>
+      <app-list *ngSwitchDefault [id]="id"></app-list>
+    </ng-container>
 </ion-content>

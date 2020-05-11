@@ -8,14 +8,22 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./folder.page.scss'],
 })
 export class FolderPage implements OnInit {
-  public folder: string;
+  public id: string;
+  public title: string;
+  public title_map = new Map<string, string>([
+    ['schedule','スケジュール'] ,
+    ['mylist' , 'マイリスト'] ,
+  ])
+
 
   constructor(private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
-    this.folder = this.activatedRoute.snapshot.paramMap.get('id');
-    if(this.folder=='list') {
-      this.folder = 'リスト';
+    this.title = this.activatedRoute.snapshot.paramMap.get('title');
+    this.id = this.activatedRoute.snapshot.paramMap.get('id');
+
+    if(this.title_map.has(this.title)) {
+      this.title = this.title_map.get(this.title);  
     }
   }
 

@@ -4,6 +4,7 @@ import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -14,7 +15,7 @@ export class AppComponent implements OnInit {
   public appPages = [
     {
       title: 'リスト',
-      url: '/list',
+      url: '/folder/list/1',
       icon: 'list'
     },
     {
@@ -24,31 +25,32 @@ export class AppComponent implements OnInit {
     },
     {
       title: 'マイ　スケジュール',
-      url: '/schedule/スケジュール',
+      url: 'folder/schedule/-1',
       icon: 'time'
     },
     {
       title: 'マイ　リスト',
-      url: '/listbox',
+      url: 'folder/mylist/-1',
       icon: 'document'
     },
     {
       title: '設定',
-      url: '/settings',
+      url: '/folder/settings/-1',
       icon: 'settings'
     },
     {
       title: 'このアプリをシェア',
       url: '/share',
       icon: 'share'
-    }
+    },
   ];
+
   public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
 
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
-    private statusBar: StatusBar
+    private statusBar: StatusBar,
   ) {
     this.initializeApp();
   }
