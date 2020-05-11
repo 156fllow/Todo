@@ -4,11 +4,11 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'folder/Inbo',
+    redirectTo: 'folder/aiueo/0',
     pathMatch: 'full'
   },
   {
-    path: 'folder/:id',
+    path: 'folder/:title/:id',
     loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
   },
   {
@@ -22,6 +22,10 @@ const routes: Routes = [
   {
     path: 'schedule/:title',
     loadChildren: () => import('./schedule/schedule.module').then( m => m.SchedulePageModule)
+  },
+  {
+    path: 'mylist/:title',
+    loadChildren: () => import('./mylist/mylist.module').then( m => m.MylistPageModule)
   }
 ];
 
